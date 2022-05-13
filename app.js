@@ -12,8 +12,8 @@ dotenv.config();
 
 //add rate limiter 
 const limiter=rateLimit({
-    windowMs:process.env.MAX_REQUEST_PER_MINUTE*60*1000,
-    max:process.env.MAX_REQUEST_PER_MINUTE
+    windowMs:process.env.REQUEST_WINDOW_MINUTE*60*1000,
+    max:process.env.MAX_REQUEST_PER_WINDOW
 });
 app.use(limiter);
 
